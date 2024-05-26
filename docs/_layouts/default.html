@@ -21,7 +21,11 @@
         <tbody>
         {% for song in site.data.songs %}
           <tr>
-            <th><a href="{{ song.url }}">{{ song.name }}</a></th>
+            {% if song.url != "" %}
+            <td><a href="{{ song.url }}">{{ song.name }}</a></td>
+            {% else %}
+            <td>{{ song.name }}</td>
+            {% endif %}
             <td>{{ song.lank }}</td>
             <td>{{ song.note }}</td>
           <tr>
