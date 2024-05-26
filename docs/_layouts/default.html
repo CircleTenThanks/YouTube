@@ -21,7 +21,7 @@
         <tbody>
         {% for song in site.data.songs %}
           <tr>
-            {% if song.url %}
+            {% if song.url != 'none' %}
             <td><a href="{{ song.url }}">{{ song.name }}</a></td>
             {% else %}
             <td>{{ song.name }}</td>
